@@ -2,28 +2,38 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:background="#ffde59"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    >
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bt1"
-        android:text="Culuture"
-        />
 
     <TextView
-        android:id="@+id/tv1"
-        android:layout_width="match_parent"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bt1"
+        android:layout_margin="5dp"
+        android:transitionName="profile"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        tools:text="Jurassic World Dominion" />
+
+    <TextView
+        android:id="@+id/slug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
         android:transitionName="profile"
         android:layout_margin="5dp"
+        android:text="merde"
         android:justificationMode="inter_word"
         android:ellipsize="end"
         android:maxLines="3"
         android:textColor="@color/cardview_dark_background"
         android:textStyle="italic"
         tools:text="Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures" />
+
+
 </RelativeLayout>
