@@ -13,14 +13,14 @@
         android:text="Culuture"
         />
 
-    <TextView
+    <Button
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/bt1"
         android:transitionName="profile"
         android:layout_margin="5dp"
-        android:justificationMode="inter_word"
+        android:text="Video"
         android:ellipsize="end"
         android:maxLines="3"
         android:textColor="@color/cardview_dark_background"

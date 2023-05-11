@@ -25,7 +25,7 @@ import okhttp3.Headers;
 public class MainActivity extends AppCompatActivity {
     Button bt1;
     CategoriesModel categoriesModel = new CategoriesModel();
-    TextView tv1;
+   Button tv1;
     public static final String BASE_URL = "https://tedactu.com/wp-json/wp/v2/posts?categories=240";
     public static final String TAG = "MainActivity";
     @Override
@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,PostActivity.class));
+            }
+        });
+
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,VideosActivity.class));
             }
         });
 

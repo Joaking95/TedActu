@@ -61,8 +61,6 @@ public class PostActivity extends AppCompatActivity {
                     JSONArray response = json.jsonArray;
                     Log.i(TAG, " oui" +response);
 
-
-
                     for(int i=0; i<response.length(); i++){
 
                         JSONObject element = response.getJSONObject(i);
