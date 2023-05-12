@@ -75,6 +75,7 @@ public class YoutubeAdapter extends  RecyclerView.Adapter<YoutubeAdapter.viewhol
                 public void onClick(View v) {
 
                     Intent i = new Intent(context, PlayYoutubeActivity.class);
+                    //i.putExtra("videoId", youtubeModel.getId());
                     i.putExtra("youtubemodel", Parcels.wrap(new YoutubeModel(youtubeModel.getTitle(),youtubeModel.getThumbnailUrl(),youtubeModel.getId())));
                     context.startActivity(i);
                 }

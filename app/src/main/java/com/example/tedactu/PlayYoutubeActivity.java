@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.example.tedactu.models.YoutubeModel;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -16,7 +17,7 @@ import org.parceler.Parcels;
 public class PlayYoutubeActivity extends YouTubeBaseActivity {
 
     YouTubePlayerView youTubePlayerView;
-    public static final String BASE_URL = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXzlFOMcjv0AtfsDkcoPzf6QRO05Ooq4g&part=snippet&type=video&channelId=UCu8FZWXoBPxnPfkx6Yvh_WQ&maxResults=10";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +27,17 @@ public class PlayYoutubeActivity extends YouTubeBaseActivity {
         String id = youtubeModel.getId();
         Log.e("loll", ""+id);
 
-        youTubePlayerView.initialize(BASE_URL, new YouTubePlayer.OnInitializedListener() {
+
+        youTubePlayerView.initialize("AIzaSyDXzlFOMcjv0AtfsDkcoPzf6QRO05Ooq4g", new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+                Log.d("DetailActivity","onInitializationSuccess");
                 youTubePlayer.loadVideo(id);
             }
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
+                Log.d("DetailActivity","onInitializationFailure");
             }
         });
     }
