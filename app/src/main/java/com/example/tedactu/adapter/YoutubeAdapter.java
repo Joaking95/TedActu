@@ -69,14 +69,14 @@ public class YoutubeAdapter extends  RecyclerView.Adapter<YoutubeAdapter.viewhol
 
             videoTitle.setText(youtubeModel.getTitle());
             Glide.with(context).load(youtubeModel.getThumbnailUrl()).into(youtube);
-            //final YoutubeModel youtubeMode= new YoutubeModel() ;
+
             youtube.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     Intent i = new Intent(context, PlayYoutubeActivity.class);
                     //i.putExtra("videoId", youtubeModel.getId());
-                    i.putExtra("youtubemodel", Parcels.wrap(new YoutubeModel(youtubeModel.getTitle(),youtubeModel.getThumbnailUrl(),youtubeModel.getId())));
+                    i.putExtra("youtubemodel", Parcels.wrap(youtubeModel));
                     context.startActivity(i);
                 }
             });

@@ -49,31 +49,16 @@ public class VideosActivity extends YouTubeBaseActivity {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 JSONObject jsonObject = json.jsonObject;
-
-
                 try {
-                    JSONArray items =jsonObject.getJSONArray("items");
-                    for(int i= 0; i<items.length(); i++){
+                    JSONArray items = jsonObject.getJSONArray("items");
+                    for(int i =0; i<items.length(); i++){
                         JSONObject element = items.getJSONObject(i);
-                        // Récupérer les données de chaque vidéo
-
-                        String title = element.getJSONObject("snippet").getString("title");
-
-                        String id = element.getJSONObject("id").getString("videoId");
-
-                        String description = element.getJSONObject("snippet").getString("description");
-                        String thumbnailUrl = element.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("default").getString("url");
-                        youtubeModel = new YoutubeModel(title,thumbnailUrl, id);
-                        youtubeModel.setId(id);
-                        youtubeModels.add(youtubeModel);
+                        youtubeModels.add(new YoutubeModel(element));
                     }
-
                     youtubeAdapter.notifyDataSetChanged();
-                    Log.i(TAG, " " +youtubeModels.size());
-                }
-
-                catch (JSONException e) {
-                    Log.e(TAG, "Failed to parse JSON response: " + e.getMessage());
+                    Log.i(TAG, "MOVIES" +youtubeModels.size());
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
             }
 
