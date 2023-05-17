@@ -26,7 +26,7 @@ import java.util.List;
 import okhttp3.Headers;
 
 public class VideosActivity extends YouTubeBaseActivity {
-    public static final String BASE_URL = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXzlFOMcjv0AtfsDkcoPzf6QRO05Ooq4g&part=snippet&type=video&channelId=UCu8FZWXoBPxnPfkx6Yvh_WQ&maxResults=10";
+    public static final String BASE_URL = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDXzlFOMcjv0AtfsDkcoPzf6QRO05Ooq4g&part=snippet&type=video&channelId=UCYwjO810TxGsyEG9ytlRtbQ&maxResults=100";
     public static final String TAG = "VideoActivity";
     List<YoutubeModel> youtubeModels;
     YoutubeAdapter youtubeAdapter;
