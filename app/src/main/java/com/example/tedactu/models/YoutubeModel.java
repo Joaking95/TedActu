@@ -28,7 +28,7 @@ public class YoutubeModel {
 
          title = jsonObject.getJSONObject("snippet").getString("title");
          id = jsonObject.getJSONObject("id").getString("videoId");
-         thumbnailUrl = jsonObject.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("default").getString("url");
+         thumbnailUrl = jsonObject.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
 
     }
 

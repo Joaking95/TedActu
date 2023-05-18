@@ -15,12 +15,12 @@ import com.example.tedactu.models.CategoriesModel;
 
 import java.util.List;
 
-public class PostAdapter extends  RecyclerView.Adapter<PostAdapter.ViewHolder>{
+public class CategoryAdapter extends  RecyclerView.Adapter<CategoryAdapter.ViewHolder>{
 
   Context context;
   List<CategoriesModel> categoriesModels;
 
-    public PostAdapter(Context context, List<CategoriesModel> categoriesModels) {
+    public CategoryAdapter(Context context, List<CategoriesModel> categoriesModels) {
         this.context = context;
         this.categoriesModels = categoriesModels;
     }
@@ -34,7 +34,7 @@ public class PostAdapter extends  RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      CategoriesModel categoriesModel =categoriesModels.get(position);
+      CategoriesModel categoriesModel = categoriesModels.get(position);
       holder.bind(categoriesModel);
     }
 

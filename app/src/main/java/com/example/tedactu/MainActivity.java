@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,PostActivity.class));
+                startActivity(new Intent(MainActivity.this, CategoryActivity.class));
             }
         });
 

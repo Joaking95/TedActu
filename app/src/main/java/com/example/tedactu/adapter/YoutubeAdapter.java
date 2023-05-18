@@ -61,8 +61,7 @@ public class YoutubeAdapter extends  RecyclerView.Adapter<YoutubeAdapter.viewhol
         public viewholder(@NonNull View item) {
             super(item);
             videoTitle = item.findViewById(R.id.txtTitle);
-            youtube = item.findViewById(R.id.imgThumbnail);
-            //layout = item.findViewById(R.id.)
+            youtube = item.findViewById(R.id.ImageViewHolder);
         }
 
         public void bind(YoutubeModel youtubeModel) {

@@ -11,6 +11,8 @@
         android:id="@+id/rvVideos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
 </RelativeLayout>
